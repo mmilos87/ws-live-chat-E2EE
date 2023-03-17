@@ -1,0 +1,31 @@
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+
+application:
+  notification:
+    enable: ${PUSH_NOTIFICATIONS_ENABLED}
+    password: ${PASSWORD}
+    userName: ${USERNAME}
+    clientId: ${CLIENT_ID}
+    notificationApi: ${NOTIFICATION_API}
+    clientSecret: ${CLIENT_SECRET}
+
+  jdbc:
+    dbUser: ${DB_USER}
+    dbPassword: ${DB_PASSWORD}
+    dbPort: ${DB_PORT}
+    dbUrl: ${DB_URL}
+    dbName: ${DB_NAME}
+
+  cognito:
+    awsRegion: ${COGNITO_AWS_REGION}
+    userPoolId: ${COGNITO_USER_POOL_ID}
+
+  jwt:
+    query:
+      param: ${JWT_QUERY_PARAM}
+
+  socket:
+    stage: ${STAGE}
+    allowedOrigin: ${ALLOWED_ORIGIN}
